@@ -37,9 +37,7 @@ if st.button("Prédire le Sentiment"):
         prediction = model.predict(vectorized_input)[0]
 
         sentiment_label = "Positif" if prediction == 1 else "Négatif"
-        # La probabilité affichée est celle de la classe prédite.
-        # Si la classe prédite est 1 (Positif), on prend prediction_proba[1].
-        # Si la classe prédite est 0 (Négatif), on prend prediction_proba[0].
+     
         predicted_confidence = prediction_proba[prediction]
 
         st.subheader("Prédiction :")
